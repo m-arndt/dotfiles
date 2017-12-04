@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/michael/Universität/Semester_1/C_Kurs/aufgaben/e5/testing/test/e5_djgtest'
+let g:netrw_dirhist_2='/home/michael/Universität/Semester_2/Allgemeines_Programmierpraktikum/Uebungen'
+let g:netrw_dirhist_3='/home/michael/Universität/Semester_2/Allgemeines_Programmierpraktikum'
+let g:netrw_dirhist_4='/home/michael/Backup/etc/udev/hwdb.d'
+let g:netrw_dirhist_5='/home/michael/.config/i3blocks'
+let g:netrw_dirhist_6='/home/michael/Universität/Semester_3/Diskrete_Stochastik/Übungen'
+let g:netrw_dirhist_7='/etc/ssh'

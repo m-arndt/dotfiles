@@ -201,45 +201,45 @@ exec --no-startup-id sh -c "/usr/bin/killall synergyc; while [ $(pgrep -x synerg
 
 mode "util" {
 	
-	bindsym $mod+1 workspace 11
-	bindsym $mod+2 workspace 12
-	bindsym $mod+3 workspace 13
-	bindsym $mod+4 workspace 14
-	bindsym $mod+5 workspace 15
-	bindsym $mod+6 workspace 16
-	bindsym $mod+7 workspace 17
-	bindsym $mod+8 workspace 18
-	bindsym $mod+9 workspace 19
-	bindsym $mod+0 workspace 20
+	bindsym $mod+1 workspace 11; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+2 workspace 12; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+3 workspace 13; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+4 workspace 14; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+5 workspace 15; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+6 workspace 16; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+7 workspace 17; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+8 workspace 18; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+9 workspace 19; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+0 workspace 20; exec sh -c 'i3-msg mode "default"'
 		
-	bindsym $mod+Shift+1 move container to workspace 11
-	bindsym $mod+Shift+2 move container to workspace 12
-	bindsym $mod+Shift+3 move container to workspace 13
-	bindsym $mod+Shift+4 move container to workspace 14
-	bindsym $mod+Shift+5 move container to workspace 15
-	bindsym $mod+Shift+6 move container to workspace 16
-	bindsym $mod+Shift+7 move container to workspace 17
-	bindsym $mod+Shift+8 move container to workspace 18
-	bindsym $mod+Shift+9 move container to workspace 19
-	bindsym $mod+Shift+0 move container to workspace 20
+	bindsym $mod+Shift+1 move container to workspace 11; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+2 move container to workspace 12; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+3 move container to workspace 13; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+4 move container to workspace 14; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+5 move container to workspace 15; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+6 move container to workspace 16; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+7 move container to workspace 17; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+8 move container to workspace 18; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+9 move container to workspace 19; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+Shift+0 move container to workspace 20; exec sh -c 'i3-msg mode "default"'
 
-	bindsym l exec bash -c 'convert $(find ~/Bilder/Desktophintergründe/Space/ -name "*.png" | shuf -n1) -scale $(xrandr | grep \* | cut -d\\" \\" -f4) ~/lockscreen.png && i3lock -e -f -i ~/lockscreen.png && rm ~/lockscreen.png'
+	bindsym l exec bash -c 'convert $(find ~/Bilder/Desktophintergründe/Space/ -name "*.png" | shuf -n1) -scale $(xrandr | grep \* | cut -d\\" \\" -f4) ~/lockscreen.png && i3lock -e -f -i ~/lockscreen.png && rm ~/lockscreen.png'; exec sh -c 'i3-msg mode "default"'
 	
-	bindsym w exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'
+	bindsym w exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'; exec sh -c 'i3-msg mode "default"'
 
 #	bindsym  workspace sndm
 #	bindsym Shift+l move container to workspace sndm
 
 	bindsym h mode HDMI-0
 	bindsym v mode VGA-0
+	
+	bindsym c mode "CHANGE"
 
-	bindsym b mode BRIGHTNESS
-
-	bindsym $mod+s exec sh -c "shutdown now"
-	bindsym $mod+r exec sh -c "shutdown -r now"
+	bindsym $mod+s exec sh -c "shutdown now"; exec sh -c 'i3-msg mode "default"'
+	bindsym $mod+r exec sh -c "shutdown -r now"; exec sh -c 'i3-msg mode "default"'
 
 	bindsym Return mode "default"
-    bindsym Escape mode "default"
+	bindsym Escape mode "default"
 }
 
 mode "HDMI-0" {
@@ -261,28 +261,36 @@ mode "VGA-0" {
 
 }
 
+mode "CHANGE" {
+
+	bindsym v mode "VOLUME"; exec sh -c 'sleep 2 && i3-msg mode "default"' 
+	bindsym b mode "BRIGHTNESS"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+}
+
+mode "VOLUME" {
+
+	bindsym u exec bash -c 'xdotool key XF86AudioRaiseVolume'
+	bindsym d exec bash -c 'xdotool key XF86AudioLowerVolume'
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+}
 mode "BRIGHTNESS" {
 	
-#	bindsym 1 exec sh -c 'echo 10 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 2 exec sh -c 'echo 20 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 3 exec sh -c 'echo 30 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 4 exec sh -c 'echo 40 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 5 exec sh -c 'echo 50 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 6 exec sh -c 'echo 60 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 7 exec sh -c 'echo 70 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 8 exec sh -c 'echo 80 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 9 exec sh -c 'echo 90 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
-#	bindsym 0 exec sh -c 'echo 100 | gksudo tee /sys/class/backlight/radeon_bl0/brightness'
 
-	bindsym u exec sh -c 'xdotool key XF86MonBrightnessUp'
-	bindsym d exec sh -c 'xdotool key XF86MonBrightnessDown'
-
+	bindsym u exec bash -c 'xdotool key XF86MonBrightnessUp'
+	bindsym d exec bash -c 'xdotool key XF86MonBrightnessDown'
 
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
 
-bindsym $mod+u mode "util"; exec sh -c 'sleep 5 && i3-msg mode "default"'
+bindsym $mod+u mode "util"
 
 mode "start" {
 	

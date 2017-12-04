@@ -263,7 +263,7 @@ mode "VGA-0" {
 
 mode "CHANGE" {
 
-	bindsym v mode "VOLUME"; exec sh -c 'sleep 2 && i3-msg mode "default"' 
+	bindsym v mode "VOLUME"
 	bindsym b mode "BRIGHTNESS"
 
 	bindsym Return mode "default"

@@ -4,7 +4,7 @@
 
 SCRIPT=$(readlink -f $0)
 
-sudo apt install vim-gtk3
+sudo apt install vim-gtk3 htop
 
 ln -v -b -s $(dirname "$SCRIPT")/ActualBackup/.bashrc ~/.bashrc
 ln -v -b -s $(dirname "$SCRIPT")/ActualBackup/.bash_aliases ~/.bash_aliases

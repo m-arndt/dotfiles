@@ -224,6 +224,8 @@ mode "util" {
 	bindsym $mod+Shift+0 move container to workspace 20
 
 	bindsym l exec sh -c 'convert $(find ~/Bilder/Desktophintergründe/Space/ -name "*.png" | shuf -n1) -scale "1366" ~/lockscreen.png && i3lock -e -f -i ~/lockscreen.png && rm ~/lockscreen.png'
+	
+	bindsym w exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'
 
 #	bindsym  workspace sndm
 #	bindsym Shift+l move container to workspace sndm
@@ -298,4 +300,6 @@ mode "start" {
 }
 
 bindsym $mod+s mode "start"; exec sh -c 'sleep 2 && i3-msg mode "default"' 
+
+exec --no-startup-id i3-msg workspace 1
 

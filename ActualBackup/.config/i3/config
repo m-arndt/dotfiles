@@ -294,20 +294,20 @@ bindsym $mod+u mode "util"
 
 mode "start" {
 	
-	bindsym t exec /opt/telegram/telegram
+	bindsym t exec /opt/telegram/telegram; mode "default"
 	
-	bindsym r exec /opt/reditr/reditr_app
+	bindsym r exec /opt/reditr/reditr_app; mode "default"
 
-	bindsym f exec env MOZ_USE_XINPUT2=1 firefox
-	bindsym c exec chromium-browser
+	bindsym f exec env MOZ_USE_XINPUT2=1 firefox; mode "default"
+	bindsym c exec chromium-browser; mode "default"
 
-	bindsym i exec intellij-idea-community
+	bindsym i exec intellij-idea-community; mode "default"
 
 	bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
-bindsym $mod+s mode "start"; exec sh -c 'sleep 2 && i3-msg mode "default"' 
+bindsym $mod+s mode "start"
 
 exec --no-startup-id i3-msg workspace 1
 

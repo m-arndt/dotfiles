@@ -1,5 +1,6 @@
 source /home/michael/antigen.zsh
 
+export TERM="xterm-256color"
 
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 

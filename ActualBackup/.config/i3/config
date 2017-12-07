@@ -182,7 +182,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id synclient VertScrollDelta=-116
 
 #Desktophintergrund
-exec --no-startup-id feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/
+exec --no-startup-id feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/
 
 #Tastatuslayout
 exec --no-startup-id setxkbmap de
@@ -225,7 +225,7 @@ mode "util" {
 
 	bindsym l exec bash -c 'convert $(find ~/Bilder/Desktophintergründe/Space/ -name "*.png" | shuf -n1) -scale $(xrandr | grep \* | cut -d\\" \\" -f4)^ ~/lockscreen.png && i3lock -e -f -i ~/lockscreen.png && rm ~/lockscreen.png'; mode "default"
 	
-	bindsym w exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
+	bindsym w exec sh -c 'feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
 
 #	bindsym  workspace sndm
 #	bindsym Shift+l move container to workspace sndm
@@ -244,7 +244,7 @@ mode "util" {
 
 mode "HDMI-0" {
 	
-	bindsym i exec sh -c 'xrandr --output HDMI-0 --mode 1920x1080 --right-of LVDS'; exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
+	bindsym i exec sh -c 'xrandr --output HDMI-0 --mode 1920x1080 --right-of LVDS'; exec sh -c 'feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
 	bindsym o exec sh -c 'xrandr --output HDMI-0 --off'; mode "default"
 	
 	bindsym Return mode "default"
@@ -253,7 +253,7 @@ mode "HDMI-0" {
 
 mode "VGA-0" {
 
-	bindsym i exec sh -c 'xrandr --output VGA-0 --auto --right-of LVDS'; exec sh -c 'feh --randomize --bg-scale /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
+	bindsym i exec sh -c 'xrandr --output VGA-0 --auto --right-of LVDS'; exec sh -c 'feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/'; mode "default"
 	bindsym o exec sh -c 'xrandr --output VGA-0 --off'; mode "default"
 	
 	bindsym Return mode "default"

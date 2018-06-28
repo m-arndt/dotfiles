@@ -193,9 +193,8 @@ exec --no-startup-id setxkbmap de
 exec --no-startup-id sh -c "/usr/bin/killall synergyc; while [ $(pgrep -x synergyc) ]; do sleep 0.1; done; /usr/bin/synergyc --enable-drag-drop 192.168.188.9"
 
 #Syncthing
-#exec --no-startup-id sh -c "if [ !$(pgrep -x syncthing) ]; then syncthing; fi"
+exec --no-startup-id sh -c "if [ !$(pgrep -x syncthing) ]; then syncthing; fi"
 
-#Syncthing
 #exec --no-startup-id sh -c "if [ !$(pgrep -x ) ]; then syncthing; fi"
 
 

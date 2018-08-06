@@ -1,4 +1,4 @@
-source /home/michael/antigen.zsh
+source ~/antigen.zsh
 
 export TERM="xterm-256color"
 
@@ -41,7 +41,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme bhilburn/powerlevel9k powerlevel9k
 #antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 
-source /home/michael/.bash_aliases
+source ~/.bash_aliases
 
 # Tell Antigen that you're done.
 antigen apply

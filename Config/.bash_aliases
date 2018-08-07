@@ -9,8 +9,6 @@ alias l='ls -CF'
 
 alias htop='sudo htop'
 
-alias unissh='ssh ***REMOVED***@shell.stud.informatik.uni-goettingen.de'
-
 alias fuck='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
 alias apt='sudo apt'

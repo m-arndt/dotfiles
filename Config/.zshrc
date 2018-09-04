@@ -5,7 +5,7 @@ export TERM="xterm-256color"
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history date time)
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=false

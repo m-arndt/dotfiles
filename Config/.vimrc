@@ -6,7 +6,7 @@ set nocompatible
 set showmode
 set showcmd
 imap <C-L> <Esc>
-colorscheme badwolf
+colorscheme monokai-phoenix
 set cursorline
 filetype indent on
 set showmatch  

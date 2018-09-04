@@ -21,7 +21,9 @@ POWERLEVEL9K_HOME_SUB_ICON=""
 POWERLEVEL9K_FOLDER_ICON=""
 POWERLEVEL9K_TAG_ICON=""
 
-eval `dircolors ~/.dircolors`
+if [ -f ~/.dircolors ]; then
+    eval `dircolors ~/.dircolors`
+fi
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh

@@ -7,8 +7,6 @@ alias lk='ls -lF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias htop='sudo htop'
-
 alias fuck='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
 alias apt='sudo apt'

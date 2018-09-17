@@ -57,3 +57,5 @@ alias busy="cat /dev/urandom | hexdump -C"
 
 alias takephoto='ffmpeg -v error -f video4linux2 -s 1280x800 -i /dev/video0 -vf drawtext="fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf:text='%{localtime}':x=20:y=20:fontcolor=white" -vframes 1 ~/cameraphoto/$(date +%Y-%m-%d-%H-%M-%S).jpg'
 
+alias win="cmd.exe /C"
+

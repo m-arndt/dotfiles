@@ -176,13 +176,13 @@ workspace 0 output LVDS
 workspace "sndm" output HDMI-0
 
 #Netzwerkmanager
-#exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 #Natürliches Scrollen
-#exec --no-startup-id synclient VertScrollDelta=-116
+exec --no-startup-id synclient VertScrollDelta=-116
 
 #Desktophintergrund
-#exec --no-startup-id feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/
+exec --no-startup-id feh --randomize --bg-fill /home/michael/Bilder/Desktophintergründe/Space/
 
 #Tastatuslayout
 exec --no-startup-id setxkbmap de
@@ -193,7 +193,7 @@ exec --no-startup-id setxkbmap de
 #exec --no-startup-id sh -c "/usr/bin/killall synergyc; while [ $(pgrep -x synergyc) ]; do sleep 0.1; done; /usr/bin/synergyc --enable-drag-drop 192.168.188.9"
 
 #Syncthing
-#exec --no-startup-id sh -c "if [ !$(pgrep -x syncthing) ]; then syncthing; fi"
+exec --no-startup-id sh -c "if [ !$(pgrep -x syncthing) ]; then syncthing; fi"
 
 #exec --no-startup-id sh -c "if [ !$(pgrep -x ) ]; then syncthing; fi"
 

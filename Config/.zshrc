@@ -45,6 +45,8 @@ antigen theme bhilburn/powerlevel9k powerlevel9k
 
 source ~/.bash_aliases
 
+source ~/.profile
+
 # Tell Antigen that you're done.
 antigen apply
 

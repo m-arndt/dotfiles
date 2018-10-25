@@ -2,6 +2,8 @@
 
 bash -c "./createessentiallinks.sh"
 
+sudo apt update
+
 sudo apt install zsh zsh-antigen fonts-font-awesome
 
 zsh -c 'exit'

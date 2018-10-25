@@ -9,7 +9,6 @@ alias l='ls -CF'
 
 alias fuck='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
-alias apt='sudo apt'
 
 alias getupdates='printf "\n\nUpdating\n"; sudo apt update; printf "\n\nUpgrading\n"; sudo apt upgrade'
 

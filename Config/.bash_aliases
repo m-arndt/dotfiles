@@ -2,12 +2,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias ll='ls -alF'
-alias lk='ls -lF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias fuck='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
 
 alias getupdates='printf "\n\nUpdating\n"; sudo apt update; printf "\n\nUpgrading\n"; sudo apt upgrade'
@@ -27,8 +21,6 @@ alias mount='mount | column -t'
 #Usage: try someDocument.doc
 alias try='gnome-open'
 
-alias ..='cd ..'
-alias ...='cd ../../'
 
 function repeat()      
 {
@@ -39,22 +31,11 @@ function repeat()
     done
 }
 
-function takephotos()
-{
-    local i max
-    max=$1; shift;
-    for ((i=1; i <= max ; i++)); do  # --> C-like syntax
-	ffmpeg -v error -f video4linux2 -s 1280x800 -i /dev/video0 -vf drawtext="fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf:text='%{localtime}':x=20:y=20:fontcolor=white" -vframes 1 ~/cameraphoto/$(date +%Y-%m-%d-%H-%M-%S).jpg
-	sleep 1
-    done
-}
 #sudo vim
 alias svim='sudo vim'
 
 #fun aliases
 alias busy="cat /dev/urandom | hexdump -C"
-
-alias takephoto='ffmpeg -v error -f video4linux2 -s 1280x800 -i /dev/video0 -vf drawtext="fontfile=/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf:text='%{localtime}':x=20:y=20:fontcolor=white" -vframes 1 ~/cameraphoto/$(date +%Y-%m-%d-%H-%M-%S).jpg'
 
 alias wincmd="cmd.exe /C"
 alias winps="powershell.exe"

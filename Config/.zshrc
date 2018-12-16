@@ -24,6 +24,7 @@ HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 
 alias ls="ls --color"
+eval "$(dircolors ~/.dir_colors)"
 
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then

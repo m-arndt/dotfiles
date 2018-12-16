@@ -1,9 +1,3 @@
-source ~/antigen.zsh
-
-export TERM="xterm-256color"
-
-POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
-
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history date time)
 
@@ -21,32 +15,48 @@ POWERLEVEL9K_HOME_SUB_ICON=""
 POWERLEVEL9K_FOLDER_ICON=""
 POWERLEVEL9K_TAG_ICON=""
 
-if [ -f ~/.dircolors ]; then
-    eval `dircolors ~/.dircolors`
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+
+alias ls="ls --color"
+
+# Check if zplug is installed
+if [[ ! -d ~/.zplug ]]; then
+  git clone https://github.com/zplug/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
 fi
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# Essential
+source ~/.zplug/init.zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle heroku
-antigen bundle pip
-antigen bundle lein
-antigen bundle command-not-found
+zplug "ael-code/zsh-colored-man-pages"
+zplug "chrissicool/zsh-256color"
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-history-substring-search"
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
-# Load the theme.
-#antigen theme agnoster-custom 
-antigen theme bhilburn/powerlevel9k powerlevel9k
-#antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/cargo", from:oh-my-zsh
+zplug "plugins/colorize", from:oh-my-zsh
+zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "plugins/sudo", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
 
-source ~/.bash_aliases
+# Install packages that have not been installed yet
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    else
+        echo
+    fi
+fi
 
-source ~/.profile
+zplug load
 
-# Tell Antigen that you're done.
-antigen apply
+setopt autocd
+zstyle ':completion:*' menu select
 

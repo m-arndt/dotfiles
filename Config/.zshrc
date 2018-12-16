@@ -1,3 +1,6 @@
+#!/bin/zsh
+
+# Powerlevel9K config
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history date time)
 
@@ -14,6 +17,7 @@ POWERLEVEL9K_HOME_ICON=""
 POWERLEVEL9K_HOME_SUB_ICON=""
 POWERLEVEL9K_FOLDER_ICON=""
 POWERLEVEL9K_TAG_ICON=""
+
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
@@ -36,7 +40,11 @@ zplug "chrissicool/zsh-256color"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
+
+# Theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+zplug "zdharma/history-search-multi-word"
 
 zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/cargo", from:oh-my-zsh

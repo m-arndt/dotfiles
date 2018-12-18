@@ -76,5 +76,5 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 #autoload -Uz compinit
 #compinit
 
-source .bash_aliases
+source ~/.bash_aliases
 

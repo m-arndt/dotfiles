@@ -44,6 +44,7 @@ zplug "zdharma/fast-syntax-highlighting"
 
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions"
 
 # Theme
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme

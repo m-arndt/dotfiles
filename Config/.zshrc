@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+#export TERM="xterm-256color"
+
 # Powerlevel9K config
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history date time)
@@ -38,7 +40,8 @@ source ~/.zplug/init.zsh
 zplug "ael-code/zsh-colored-man-pages"
 zplug "chrissicool/zsh-256color"
 
-zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zdharma/fast-syntax-highlighting"
+
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-history-substring-search"
 

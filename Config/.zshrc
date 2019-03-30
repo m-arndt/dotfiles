@@ -37,6 +37,8 @@ fi
 # Essential
 source ~/.zplug/init.zsh
 
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
 zplug "ael-code/zsh-colored-man-pages"
 zplug "chrissicool/zsh-256color"
 
@@ -57,6 +59,7 @@ zplug "plugins/colorize", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/tmux", from:oh-my-zsh
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then

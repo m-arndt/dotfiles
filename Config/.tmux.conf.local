@@ -165,7 +165,7 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{battery_status}
 #     - #{battery_vbar}
 #     - #{circled_session_name}
-#     - #{hostname_ssh}
+#     - #{HOSTNAME_SSH}
 #     - #{hostname}
 #     - #{loadavg}
 #     - #{pairing}

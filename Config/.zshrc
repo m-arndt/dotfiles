@@ -37,7 +37,7 @@ fi
 # Essential
 source ~/.zplug/init.zsh
 
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+#zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "ael-code/zsh-colored-man-pages"
 zplug "chrissicool/zsh-256color"

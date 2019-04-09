@@ -2,6 +2,9 @@
 
 #export TERM="xterm-256color"
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Powerlevel9K config
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ssh detect_virt status root_indicator background_jobs history date time)

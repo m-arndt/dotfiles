@@ -3,5 +3,4 @@
 sudo apt update
 sudo apt install i3 i3blocks rofi feh
 
-bash -c './createlinksi3.sh'
-
+$SCRIPT_DIR/i3-config.sh

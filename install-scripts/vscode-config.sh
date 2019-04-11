@@ -20,9 +20,10 @@ extensions=(
     vadimcn.vscode-lldb
     aaron-bond.better-comments
     shakram02.bash-beautify
+    smeagolem.ayu-one-dark-pro
 )
 
 for i in "${extensions[@]}"
 do
-    code --install-extension $i
+    code --install-extension --force $i
 done

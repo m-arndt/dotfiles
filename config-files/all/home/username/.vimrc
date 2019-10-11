@@ -16,8 +16,10 @@ set laststatus=2
 
 " Plugins
 call plug#begin('~/.vim/plugged')
+
 Plug 'rust-lang/rust.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 

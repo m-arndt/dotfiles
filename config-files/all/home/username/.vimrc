@@ -6,7 +6,7 @@ set nocompatible
 set showmode
 set showcmd
 imap <C-L> <Esc>
-colorscheme monokai-phoenix
+" colorscheme monokai-phoenix
 set cursorline
 filetype indent on
 set showmatch  
@@ -21,5 +21,10 @@ Plug 'rust-lang/rust.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
+
+colorscheme codedark
+let g:airline_theme = 'codedark'
 

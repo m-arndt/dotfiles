@@ -12,3 +12,12 @@ filetype indent on
 set showmatch  
 cmap w!! w !sudo tee >/dev/null %
 
+set laststatus=2
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'rust-lang/rust.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+call plug#end()
+

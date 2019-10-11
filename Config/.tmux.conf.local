@@ -348,10 +348,11 @@ set -g @tpm_plugins '			\
 
 set -g status-interval 5
 
-set -g @resurrect-dir '~/.tmux-resurrect'
+#set -g @resurrect-dir '~/.tmux-resurrect'
 
 #restore tmux sessions on tmux-server start
 set -g @continuum-restore 'on'
+set -g @continuum-save-interval '5'
 
 run -b '~/.tmux/plugins/tpm/tpm'
 

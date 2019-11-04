@@ -18,6 +18,10 @@ function repeat()
     done
 }
 
+#thefuck alias
+eval $(thefuck --alias)
+
+#Aliases for WSL
 alias wincmd="cmd.exe /C"
 alias winps="powershell.exe"
 

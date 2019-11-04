@@ -104,3 +104,4 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
 source ~/.bash_aliases
 
+source ~/.p10k.zsh

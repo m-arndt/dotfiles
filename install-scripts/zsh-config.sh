@@ -7,6 +7,7 @@ ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.zshrc ~/.zshrc
 
 ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.dir_colors ~/.dir_colors
 
-git clone https://github.com/powerline/fonts.git --depth=1
-(cd fonts; ./install.sh)
-rm -rf fonts
+ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.p10k.zsh ~/.p10k.zsh
+
+$SCRIPT_DIR/fonts-nerd.sh
+#$SCRIPT_DIR/fonts-powerline.sh

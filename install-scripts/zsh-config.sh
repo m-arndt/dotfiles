@@ -9,5 +9,5 @@ ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.dir_colors ~/.dir_col
 
 ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.p10k.zsh ~/.p10k.zsh
 
-$SCRIPT_DIR/fonts-nerd.sh
+#$SCRIPT_DIR/fonts-nerd.sh
 #$SCRIPT_DIR/fonts-powerline.sh

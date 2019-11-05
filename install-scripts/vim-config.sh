@@ -9,7 +9,8 @@ ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.vimrc ~/.vimrc
 
 #rm -r ~/.vim
 mkdir ~/.vim/
-ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.vim/colors/ ~/.vim/colors
+rm -rf ~/.vim/colors
+ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.vim/colors ~/.vim/colors
 
 #vimplug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

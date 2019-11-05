@@ -83,6 +83,7 @@ zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
+zplug "plugins/git-extras", from:oh-my-zsh
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then
@@ -104,4 +105,6 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
 source ~/.bash_aliases
 
-source ~/.p10k.zsh
+if [[ -f ~/.p10k.zsh ]]; then
+	source ~/.p10k.zsh
+fi

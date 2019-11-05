@@ -103,7 +103,9 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 #autoload -Uz compinit
 #compinit
 
-source ~/.bash_aliases
+if [[ -f ~/.bash_aliases ]]; then
+	source ~/.bash_aliases
+fi
 
 if [[ -f ~/.p10k.zsh ]]; then
 	source ~/.p10k.zsh

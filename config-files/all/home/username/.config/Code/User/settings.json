@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0,
+    "explorer.confirmDelete": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": false,
+    "todo-tree.highlights.enabled": true,
+    "editor.fontFamily": "'DroidSansMono Nerd Font', monospace",
+}

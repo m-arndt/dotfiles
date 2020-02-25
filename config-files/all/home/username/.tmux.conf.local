@@ -349,7 +349,7 @@ set -g @tpm_plugins '			\
 	tmux-plugins/tmux-sidebar	\
 '
 
-set -g status-interval 5
+set -g status-interval 1
 
 #set -g @resurrect-dir '~/.tmux-resurrect'
 

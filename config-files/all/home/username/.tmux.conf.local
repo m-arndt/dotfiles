@@ -353,9 +353,11 @@ set -g status-interval 1
 
 #set -g @resurrect-dir '~/.tmux-resurrect'
 
+set -g @resurrect-capture-pane-contents 'on'
+
 #restore tmux sessions on tmux-server start
 set -g @continuum-restore 'on'
-set -g @continuum-save-interval '5'
+set -g @continuum-save-interval '2'
 
 run -b '~/.tmux/plugins/tpm/tpm'
 

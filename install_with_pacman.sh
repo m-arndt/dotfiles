@@ -8,6 +8,6 @@ $SCRIPT_DIR/install-scripts/bash-config.sh
 
 $SCRIPT_DIR/install-scripts/yay.sh
 
-$SCRIPT_DIR/install-scripts/tmux-pacman.sh
-$SCRIPT_DIR/install-scripts/vim-pacman.sh
-$SCRIPT_DIR/install-scripts/zsh-pacman.sh
+$SCRIPT_DIR/install-scripts/tmux_pacman.sh
+$SCRIPT_DIR/install-scripts/vim_pacman.sh
+$SCRIPT_DIR/install-scripts/zsh_pacman.sh

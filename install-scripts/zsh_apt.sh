@@ -1,10 +1,9 @@
 #!/bin/bash
-set -x
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
+SCRIPT_DIR=$(dirname $(realpath "$0"))
+DOTFILES_ROOT=$(dirname "$(dirname $(realpath "$0"))")
 
 sudo apt update
-sudo apt install zsh
+sudo apt install zsh fonts-font-awesome
 
 $SCRIPT_DIR/zsh_config.sh

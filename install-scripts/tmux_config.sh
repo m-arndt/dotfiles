@@ -1,8 +1,9 @@
 #!/bin/bash
-set -x
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
+#$(dirname "$SCRIPT")/installzsh.sh
+
+SCRIPT_DIR=$(dirname $(realpath "$0"))
+DOTFILES_ROOT=$(dirname "$(dirname $(realpath "$0"))")
 
 echo "file"
 #ln -v -b -s $(dirname $(realpath "$0"))/Config/.tmux.conf ~/.tmux.conf

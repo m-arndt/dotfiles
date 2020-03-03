@@ -6,4 +6,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 
 sudo pacman -S i3 i3blocks rofi feh
 
-$SCRIPT_DIR/i3-config.sh
+$SCRIPT_DIR/i3_config.sh

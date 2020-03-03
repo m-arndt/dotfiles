@@ -6,4 +6,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 
 sudo pacman -S tmux
 
-$SCRIPT_DIR/tmux-config.sh
+$SCRIPT_DIR/tmux_config.sh

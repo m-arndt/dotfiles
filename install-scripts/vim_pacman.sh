@@ -6,4 +6,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 
 sudo pacman -S gvim
 
-$SCRIPT_DIR/vim-config.sh
+$SCRIPT_DIR/vim_config.sh

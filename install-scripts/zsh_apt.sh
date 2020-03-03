@@ -7,4 +7,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 sudo apt update
 sudo apt install zsh
 
-$SCRIPT_DIR/zsh-config.sh
+$SCRIPT_DIR/zsh_config.sh

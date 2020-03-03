@@ -7,4 +7,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 sudo apt update
 sudo apt install tmux
 
-$SCRIPT_DIR/tmux-config.sh
+$SCRIPT_DIR/tmux_config.sh

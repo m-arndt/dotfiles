@@ -6,6 +6,6 @@ DOTFILES_ROOT=$SCRIP_DIR
 
 $SCRIPT_DIR/install-scripts/bash-config.sh
 
-$SCRIPT_DIR/install-scripts/tmux-apt.sh
-$SCRIPT_DIR/install-scripts/vim-apt.sh
-$SCRIPT_DIR/install-scripts/zsh-apt.sh
+$SCRIPT_DIR/install-scripts/tmux_apt.sh
+$SCRIPT_DIR/install-scripts/vim_apt.sh
+$SCRIPT_DIR/install-scripts/zsh_apt.sh

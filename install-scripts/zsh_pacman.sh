@@ -6,4 +6,4 @@ DOTFILES_ROOT=$(dirname "$SCRIP_DIR")
 
 sudo pacman -S zsh ttf-font-awesome
 
-$SCRIPT_DIR/zsh-config.sh
+$SCRIPT_DIR/zsh_config.sh

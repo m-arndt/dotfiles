@@ -6,5 +6,5 @@
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": false,
     "todo-tree.highlights.enabled": true,
-    "editor.fontFamily": "'DroidSansMono Nerd Font', monospace",
+    "editor.fontFamily": "'DejaVuSansMono Nerd Font', monospace",
 }

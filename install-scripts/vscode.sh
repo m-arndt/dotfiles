@@ -15,6 +15,6 @@ ln -v -b -s $DOTFILES_ROOT/config-files/all/home/username/.config/Code/User/sett
 
 /home/michael/dotfiles/config-files/all/home/username/.config/Code/User/settings.json
 
-cat $SCRIPT_DIR/resources/vscode-extensions | while read p; do
+cat $SCRIPT_DIR/resources/vscode_extensions | while read p; do
   code --install-extension $p
 done

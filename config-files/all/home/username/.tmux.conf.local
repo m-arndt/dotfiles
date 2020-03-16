@@ -343,11 +343,10 @@ set-option -g renumber-windows off
 #set -g @plugin 'tmux-plugins/tmux-sidebar'
 
 set -g @tpm_plugins '			\
-	tmux-plugins/tpm			\
+	tmux-plugins/tpm		\
 	tmux-plugins/tmux-resurrect	\
 	tmux-plugins/tmux-continuum	\
 	tmux-plugins/tmux-yank		\
-	tmux-plugins/tmux-open		\
 	tmux-plugins/tmux-sidebar	\
 '  
 

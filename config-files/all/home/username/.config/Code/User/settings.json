@@ -7,4 +7,7 @@
     "editor.renderControlCharacters": false,
     "todo-tree.highlights.enabled": true,
     "editor.fontFamily": "'DejaVuSansMono Nerd Font', monospace",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
 }

@@ -9,5 +9,11 @@ $ProfilesPathAbsolute = Join-Path -Path $env:USERPROFILE -ChildPath $ProfilesPat
 $ProfilesPathDotfiles = Join-Path $DotfilesRoot "\config-files\windows\userdir\" $ProfilesPathRelative
 Write-Host $ProfilesPathDotfiles
 
-Remove-Item $ProfilesPathAbsolute -ErrorAction Ignore
-New-Item -ItemType SymbolicLink -Path $ProfilesPathAbsolute -Target $ProfilesPathDotfiles
+#TODO better solution for this that doesnt inhibit both the syncing and the reloading of the config in windows terminal
+
+Copy-Item -Path $ProfilesPathDotfiles -Destination $ProfilesPathAbsolute
+
+#Remove-Item $ProfilesPathAbsolute -ErrorAction Ignore
+
+#Windows Terminal doesnt reload the settings if the file change date hasnt changed so this solution is suboptimal
+#New-Item -ItemType SymbolicLink -Path $ProfilesPathAbsolute -Target $ProfilesPathDotfiles

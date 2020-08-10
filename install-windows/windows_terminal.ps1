@@ -6,7 +6,7 @@ Write-Host "Current script directory is $DotfilesRoot"
 $ProfilesPathRelative = "AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json"
 $ProfilesPathAbsolute = Join-Path -Path $env:USERPROFILE -ChildPath $ProfilesPathRelative
 
-$ProfilesPathDotfiles = Join-Path $DotfilesRoot "\config-files\windows\userdir\" $ProfilesPathRelative
+$ProfilesPathDotfiles = Join-Path $DotfilesRoot "\data\windows\userdir\" $ProfilesPathRelative
 Write-Host $ProfilesPathDotfiles
 
 #TODO better solution for this that doesnt inhibit both the syncing and the reloading of the config in windows terminal

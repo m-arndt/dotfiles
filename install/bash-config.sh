@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#ln -b -s /path/to/file /path/to/symlink
-
-#SCRIPT_DIR=$(dirname $(realpath "$0"))
-#DOTFILES_ROOT=$(dirname "$(dirname $(realpath "$0"))")
-
 #$SCRIPT_DIR/thefuck.sh
 ln -v -b -s $DOTFILES_ROOT/data/all/home/username/.bashrc ~/.bashrc
 ln -v -b -s $DOTFILES_ROOT/data/all/home/username/.bash_aliases ~/.bash_aliases

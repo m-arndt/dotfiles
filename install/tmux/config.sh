@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#$(dirname "$SCRIPT")/installzsh.sh
-
-#SCRIPT_DIR=$(dirname $(realpath "$0"))
-#DOTFILES_ROOT=$(dirname "$(dirname $(realpath "$0"))")
-
 echo "file"
 #ln -v -b -s $(dirname $(realpath "$0"))/Config/.tmux.conf ~/.tmux.conf
 #ln -v -b -s -n $(dirname $(realpath "$0"))/.tmux ~/.tmux

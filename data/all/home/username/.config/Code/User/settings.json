@@ -11,4 +11,12 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "sqltools.useNodeRuntime": true,
+    "rust.all_features": true,
+    "rust.clippy_preference": "on",
+    "rust-client.trace.server": "messages",
+    "rust-client.engine": "rust-analyzer",
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
 }

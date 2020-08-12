@@ -20,7 +20,8 @@ fi
 for item in $DOTFILES_ROOT/install/*
 do
     printf "\n\n\n\n\n"
-    read -p "Install ${item%".sh"}? [yn] " -n 1 -r
+    basename=$(basename $item)
+    read -p "Install ${basename%".sh"}? [yn] " -n 1 -r
     echo # (optional) move to a new line
     if [[ $REPLY =~ ^[Yy]$ ]]
     then

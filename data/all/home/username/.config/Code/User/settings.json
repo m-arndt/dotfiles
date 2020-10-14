@@ -11,13 +11,18 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "sqltools.useNodeRuntime": true,
+    "remote.SSH.remotePlatform": {
+        "yap.pt.tu-clausthal.de": "linux",
+        "taveuni": "linux",
+        "hekate": "linux"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "mtxr.sqltools"
+    },
+    "git.autofetch": true,
     "rust.all_features": true,
     "rust.clippy_preference": "on",
-    "rust-client.trace.server": "messages",
     "rust-client.engine": "rust-analyzer",
-    "git.ignoreLegacyWarning": true,
-    "gitlens.advanced.messages": {
-        "suppressGitVersionWarning": true
-    },
-    "todo-tree.tree.showScanModeButton": false,
+    "workbench.activityBar.visible": true,
+    "telemetry.enableTelemetry": false,
 }

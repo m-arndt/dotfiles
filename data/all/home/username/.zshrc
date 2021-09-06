@@ -76,6 +76,9 @@ zplug romkatv/powerlevel10k, as:theme, depth:1
 
 zplug "zdharma/history-search-multi-word"
 
+#better cd
+zplug "b4b4r07/enhancd"
+
 zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/cargo", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
@@ -100,8 +103,8 @@ zplug load
 setopt autocd
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-#autoload -Uz compinit
-#compinit
+autoload -Uz compinit
+compinit
 
 if [[ -f ~/.bash_aliases ]]; then
 	source ~/.bash_aliases
@@ -109,4 +112,17 @@ fi
 
 if [[ -f ~/.p10k.zsh ]]; then
 	source ~/.p10k.zsh
+fi
+
+
+if [ -d "$HOME/.sdkman" ]; then
+	#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+	export SDKMAN_DIR="$HOME/.sdkman"
+	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
+if [ -d "$HOME/.nvm" ]; then
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi

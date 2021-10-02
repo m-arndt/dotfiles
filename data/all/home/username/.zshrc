@@ -82,11 +82,13 @@ zplug "b4b4r07/enhancd"
 zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/cargo", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
+#zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
+
+zplug "DarrinTisdale/zsh-aliases-exa"
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then

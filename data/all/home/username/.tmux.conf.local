@@ -318,8 +318,8 @@ bind -n S-Right next-window
 bind n next-window
 bind p previous-window
 
-# Set default shell to zsh
-set-option -g default-shell /bin/zsh
+# Set default shell to whatever the shell variable is
+set-option -g default-shell $SHELL
 
 # Set base index back to 0
 set -g base-index 0

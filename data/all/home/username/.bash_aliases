@@ -6,8 +6,6 @@ alias ip='ip -c'
 
 alias please='sudo $(fc -ln -1)'
 
-alias getupdates='printf "\n\nUpdating\n"; sudo apt update; printf "\n\nUpgrading\n"; sudo apt upgrade'
-
 #prettier mount
 alias mount='mount | column -t'
 
@@ -22,8 +20,4 @@ function repeat()
 
 #thefuck alias
 eval $(thefuck --alias)
-
-#Aliases for WSL
-alias wincmd="cmd.exe /C"
-alias winps="powershell.exe"
 

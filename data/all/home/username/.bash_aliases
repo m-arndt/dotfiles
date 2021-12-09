@@ -2,6 +2,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias ip='ip -c'
+
 alias please='sudo $(fc -ln -1)'
 
 alias getupdates='printf "\n\nUpdating\n"; sudo apt update; printf "\n\nUpgrading\n"; sudo apt upgrade'

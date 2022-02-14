@@ -79,8 +79,6 @@ zplug "zsh-users/zsh-autosuggestions"
 #zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 zplug romkatv/powerlevel10k, as:theme, depth:1
 
-zplug "zdharma/history-search-multi-word"
-
 #better cd
 zplug "b4b4r07/enhancd"
 

@@ -85,7 +85,7 @@ zplug "zdharma/history-search-multi-word"
 zplug "b4b4r07/enhancd"
 
 zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/cargo", from:oh-my-zsh
+zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
 #zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/sudo", from:oh-my-zsh

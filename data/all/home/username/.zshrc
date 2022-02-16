@@ -64,16 +64,15 @@ fi
 # Essential
 source ~/.zplug/init.zsh
 
-#zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "ael-code/zsh-colored-man-pages"
 zplug "chrissicool/zsh-256color"
 
-zplug "zdharma/fast-syntax-highlighting"
-
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zsh-autosuggestions"
+
+zplug "zdharma-continuum/history-search-multi-word"
+zplug "zdharma-continuum/fast-syntax-highlighting"
 
 # Theme
 #zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
@@ -92,6 +91,8 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
 
 zplug "DarrinTisdale/zsh-aliases-exa"
+
+zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then

@@ -57,12 +57,14 @@ eval "$(dircolors ~/.dir_colors)"
 
 # Check if zplug is installed
 if [[ ! -d ~/.zplug ]]; then
-  git clone https://github.com/zplug/zplug ~/.zplug
-  source ~/.zplug/init.zsh && zplug update --self
+    git clone https://github.com/zplug/zplug ~/.zplug
+    source ~/.zplug/init.zsh && zplug update --self
 fi
 
 # Essential
 source ~/.zplug/init.zsh
+
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 
 zplug "ael-code/zsh-colored-man-pages"
@@ -81,14 +83,17 @@ zplug romkatv/powerlevel10k, as:theme, depth:1
 #better cd
 zplug "b4b4r07/enhancd"
 
-zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/rust", from:oh-my-zsh
 zplug "plugins/colorize", from:oh-my-zsh
 #zplug "plugins/common-aliases", from:oh-my-zsh
-zplug "plugins/sudo", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
+zplug "plugins/docker-compose", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
+zplug "plugins/pipenv", from:oh-my-zsh
+zplug "plugins/ripgrep", from:oh-my-zsh
+zplug "plugins/thefuck", from:oh-my-zsh
 
 zplug "DarrinTisdale/zsh-aliases-exa"
 
@@ -113,22 +118,22 @@ autoload -Uz compinit
 compinit
 
 if [[ -f ~/.bash_aliases ]]; then
-	source ~/.bash_aliases
+    source ~/.bash_aliases
 fi
 
 if [[ -f ~/.p10k.zsh ]]; then
-	source ~/.p10k.zsh
+    source ~/.p10k.zsh
 fi
 
 
 if [ -d "$HOME/.sdkman" ]; then
-	#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-	export SDKMAN_DIR="$HOME/.sdkman"
-	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+    #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+    export SDKMAN_DIR="$HOME/.sdkman"
+    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
-if [ -d "$HOME/.nvm" ]; then
-	export NVM_DIR="$HOME/.nvm"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+#if [ -d "$HOME/.nvm" ]; then
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#fi

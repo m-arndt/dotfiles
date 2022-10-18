@@ -114,8 +114,9 @@ zplug load
 setopt autocd
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit
+autoload -Uz compinit bashcompinit
 compinit
+bashcompinit
 
 if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases

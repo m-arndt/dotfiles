@@ -115,6 +115,12 @@ if [ -d "$HOME/.sdkman" ]; then
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
+if [ -f "/usr/share/bash-completion/completions/distrobox" ]; then
+    for file in /usr/share/bash-completion/completions/distrobox*; do
+        source "$file";
+    done
+fi
+
 #if [ -d "$HOME/.nvm" ]; then
 #   export NVM_DIR="$HOME/.nvm"
 #   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

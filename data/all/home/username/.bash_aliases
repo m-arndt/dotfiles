@@ -7,6 +7,3 @@ alias ip='ip -c'
 #prettier mount
 alias mount='mount | column -t'
 
-#thefuck alias
-eval $(thefuck --alias)
-

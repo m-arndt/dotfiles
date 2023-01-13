@@ -6,7 +6,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=100000
+HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
 setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
@@ -75,7 +75,7 @@ zplug "plugins/docker-compose", from:oh-my-zsh
 zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/ripgrep", from:oh-my-zsh
-zplug "plugins/thefuck", from:oh-my-zsh
+#zplug "plugins/thefuck", from:oh-my-zsh
 
 zplug "DarrinTisdale/zsh-aliases-exa"
 

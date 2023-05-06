@@ -122,7 +122,7 @@ fi
 PS1="\n\[\033[96m\]\$(/bin/date)\n\[\033[32m\]\w\n\[\033[1;32m\]\u@\h: \[\033[1;34m\]\$(/usr/bin/tty | /bin/sed -e 's:/dev/::'): \[\033[1;36m\]\[\033[0m\]$ \[\033[0m\]" 
 
 
-. "$HOME/.cargo/env"
+[ -s "$HOME/.cargo/env" ] && \. "$HOME/.cargo/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -72,7 +72,7 @@ zplug "plugins/command-not-found", from:oh-my-zsh
 zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
 zplug "plugins/docker-compose", from:oh-my-zsh
-zplug "plugins/nvm", from:oh-my-zsh
+#zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/pipenv", from:oh-my-zsh
 zplug "plugins/ripgrep", from:oh-my-zsh
 #zplug "plugins/thefuck", from:oh-my-zsh

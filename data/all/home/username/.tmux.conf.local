@@ -350,6 +350,7 @@ set -g status-interval 1
 #set -g @resurrect-dir '~/.tmux-resurrect'
 
 set -g @resurrect-capture-pane-contents 'on'
+set -g @resurrect-processes 'ssh'
 
 #restore tmux sessions on tmux-server start
 set -g @continuum-restore 'on'

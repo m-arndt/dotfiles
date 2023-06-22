@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+zmodload zsh/zprof
+
 #export TERM="xterm-256color"
 
 export VISUAL=vim
@@ -119,6 +121,11 @@ if [ -f "/usr/share/bash-completion/completions/distrobox" ]; then
     for file in /usr/share/bash-completion/completions/distrobox*; do
         source "$file";
     done
+fi
+
+# sourcing nvm installed from nvm at aur.archlinux.org
+if [ -d "/usr/share/nvm" ]; then
+    [[ -s "/usr/share/nvm/init-nvm.sh" ]] && source "/usr/share/nvm/init-nvm.sh"
 fi
 
 #if [ -d "$HOME/.nvm" ]; then

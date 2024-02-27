@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-zmodload zsh/zprof
-
 #export TERM="xterm-256color"
 
 export VISUAL=vim
@@ -39,68 +37,34 @@ bindkey "\e[F" end-of-line
 alias ls="ls --color"
 eval "$(dircolors ~/.dir_colors)"
 
-# Check if zplug is installed
-if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+
+# Check if zplug is installed and uninstall it
+if [[ -d ~/.zplug ]]; then
+    rm -rf ~/.zplug
 fi
 
-# Essential
-source ~/.zplug/init.zsh
-
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-
-
-zplug "ael-code/zsh-colored-man-pages"
-zplug "chrissicool/zsh-256color"
-
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-
-zplug "zdharma-continuum/history-search-multi-word"
-zplug "zdharma-continuum/fast-syntax-highlighting"
-
-# Theme
-#zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
-zplug romkatv/powerlevel10k, as:theme, depth:1
-
-#better cd
-zplug "b4b4r07/enhancd"
-
-zplug "plugins/rust", from:oh-my-zsh
-zplug "plugins/colorize", from:oh-my-zsh
-#zplug "plugins/common-aliases", from:oh-my-zsh
-zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-zplug "plugins/git-extras", from:oh-my-zsh
-zplug "plugins/docker-compose", from:oh-my-zsh
-#zplug "plugins/nvm", from:oh-my-zsh
-zplug "plugins/pipenv", from:oh-my-zsh
-zplug "plugins/ripgrep", from:oh-my-zsh
-#zplug "plugins/thefuck", from:oh-my-zsh
-
-zplug "DarrinTisdale/zsh-aliases-exa"
-
-zplug "MichaelAquilina/zsh-autoswitch-virtualenv"
-
-# Install packages that have not been installed yet
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
-    fi
+# install antidote if it is not installed
+if [[ ! -d ~/.antidote ]]; then
+    git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote
 fi
 
-zplug load
+# source antidote
+source ~/.antidote/antidote.zsh
+
+# set omz variables
+ZSH=$(antidote path ohmyzsh/ohmyzsh)
+ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
+[[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
+
+# load antidote plugins
+antidote load ~/.zsh_plugins.txt
+
 
 setopt autocd
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit bashcompinit
-compinit
-bashcompinit
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
 
 if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases

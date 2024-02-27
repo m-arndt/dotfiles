@@ -7,9 +7,6 @@ chrissicool/zsh-256color
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 
-zdharma-continuum/history-search-multi-word
-zdharma-continuum/fast-syntax-highlighting
-
 # Theme
 romkatv/powerlevel10k
 
@@ -35,6 +32,11 @@ ohmyzsh/ohmyzsh path:plugins/pipenv kind:fpath
 ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
 #ohmyzsh/ohmyzsh path:plugins/thefuck
 
+clavelm/yt-dlp-omz-plugin
+
+sunlei/zsh-ssh
+
+zdharma-continuum/history-search-multi-word
+zdharma-continuum/fast-syntax-highlighting
+
 mattmc3/zephyr path:plugins/completion
-
-

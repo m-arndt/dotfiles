@@ -63,8 +63,8 @@ antidote load ~/.zsh_plugins.txt
 setopt autocd
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
+#autoload -Uz compinit && compinit
+#autoload -Uz bashcompinit && bashcompinit
 
 if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases

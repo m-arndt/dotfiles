@@ -1,5 +1,3 @@
-$HOME/.cache/oh-my-zsh/completions kind:fpath
-
 ael-code/zsh-colored-man-pages
 
 chrissicool/zsh-256color

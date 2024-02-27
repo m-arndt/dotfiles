@@ -17,7 +17,7 @@ MichaelAquilina/zsh-autoswitch-virtualenv
 mattmc3/zephyr path:plugins/completion
 
 #better cd
-#b4b4r07/enhancd
+b4b4r07/enhancd
 
 ohmyzsh/ohmyzsh path:lib
 ohmyzsh/ohmyzsh path:plugins/rust kind:fpath

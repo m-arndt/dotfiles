@@ -327,6 +327,8 @@ setw -g pane-base-index 0
 
 #set-option -g automatic-rename on
 #set-option -g automatic-rename-format '#{?pane_in_mode,[tmux],#{pane_current_command}}#{?pane_dead,[dead],}'
+#setw -g automatic-rename-format "#{?pane_in_mode,[tmux],#{?#{m:*ssh,#{pane_current_command}},#(cut -c3- ~/.tmux.conf | sh -s _hostname #{pane_tty} true #D),#{pane_current_command}}}#{?pane_dead,[dead],}"
+#setw -g automatic-rename-format "#{?pane_in_mode,[tmux],#{?#{m:*ssh,#{pane_current_command}},#(cut -c3- ~/.tmux.conf | sh -s _hostname #{pane_tty} true false #h #D #{window_activity}),#{pane_current_command}}}#{?pane_dead,[dead],}"
 set-option -g allow-rename on
 
 set-option -g renumber-windows off

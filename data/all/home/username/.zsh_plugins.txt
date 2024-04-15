@@ -8,8 +8,6 @@ zsh-users/zsh-autosuggestions
 # Theme
 romkatv/powerlevel10k
 
-DarrinTisdale/zsh-aliases-exa
-
 MichaelAquilina/zsh-autoswitch-virtualenv
 
 mattmc3/zephyr path:plugins/completion
@@ -31,6 +29,8 @@ ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
 #ohmyzsh/ohmyzsh path:plugins/thefuck
 
 clavelm/yt-dlp-omz-plugin
+
+DarrinTisdale/zsh-aliases-exa
 
 sunlei/zsh-ssh
 

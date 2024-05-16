@@ -100,3 +100,6 @@ fi
 if [ -d "~/.local/bin" ] && [[ ":$PATH:" != *":~/.local/bin:"* ]]; then
     export PATH="$PATH:~/.local/bin"
 fi
+if [ -d "~/.cargo/bin" ] && [[ ":$PATH:" != *":~/.cargo/bin:"* ]]; then
+    export PATH="$PATH:~/.cargo/bin"
+fi

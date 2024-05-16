@@ -97,9 +97,9 @@ fi
 #   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #fi
-if [ -d ~/.local/bin ] && [[ ":$PATH:" != *":~/.local/bin:"* ]]; then
-    export PATH="$PATH:~/.local/bin"
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    export PATH="$PATH:$HOME/.local/bin"
 fi
-if [ -d ~/.cargo/bin ] && [[ ":$PATH:" != *":~/.cargo/bin:"* ]]; then
-    export PATH="$PATH:~/.cargo/bin"
+if [ -d "$HOME/.cargo/bin" ] && [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
+    export PATH="$PATH:$HOME/.cargo/bin"
 fi

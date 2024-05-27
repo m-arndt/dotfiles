@@ -85,16 +85,13 @@ disabled = false
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
-format = "[ $path ]($style)"
+format = "[ $path $read_only ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
-
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+home_symbol = " "
+use_os_path_sep = true
+read_only = "🔒"
+fish_style_pwd_dir_length = 8
 
 [git_branch]
 symbol = ""

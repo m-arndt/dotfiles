@@ -70,7 +70,9 @@ if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases
 fi
 
-if [[ -f ~/.p10k.zsh ]]; then
+if [[ -f ~/.config/starship.toml ]];then
+    eval "$(starship init zsh)"
+elif [[ -f ~/.p10k.zsh ]]; then
     source ~/.p10k.zsh
 fi
 

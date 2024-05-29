@@ -13,6 +13,7 @@ $git_branch\
 $git_status\
 $git_metrics\
 $git_commit\
+$git_state\
 [](fg:color_aqua bg:color_blue)\
 $c\
 $rust\
@@ -102,20 +103,28 @@ fish_style_pwd_dir_length = 8
 [git_branch]
 symbol = ""
 style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+always_show_remote = false
+format = '[[ $symbol $branch(:$remote_branch) ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [git_status]
 style = "bg:color_aqua"
 format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 ahead = '⇡${count}'
-diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+stashed = "\\$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
 
 [git_commit]
 style = "fg:color_fg0 bg:color_aqua"
 format = "[($hash$tag)]($style)"
 tag_symbol = " 🏷  "
-only_detached = false
+commit_hash_length = 8
+only_detached = true
+tag_disabled = false
 
 [git_state]
 style = "fg:color_fg0 bg:color_aqua"
@@ -125,7 +134,7 @@ format = "[($state( $progress_current/$progress_total))]($style)"
 added_style = "fg:color_fg0 bg:color_aqua"
 deleted_style = "fg:color_fg0 bg:color_aqua"
 format = "[([+$added]($added_style))([-$deleted]($deleted_style)) ](bg:color_aqua)"
-disabled = false
+disabled = true
 
 [nodejs]
 symbol = ""

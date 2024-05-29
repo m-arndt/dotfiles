@@ -83,7 +83,7 @@ format = '[ $user ]($style)'
 
 [hostname]
 ssh_only = true
-ssh_symbol = "🌐"
+ssh_symbol = "🌍"
 trim_at = "."
 detect_env_vars = []
 style = "bg:color_orange fg:color_fg0"

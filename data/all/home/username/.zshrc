@@ -52,19 +52,17 @@ fi
 source ~/.antidote/antidote.zsh
 
 # set omz variables
-ZSH=$(antidote path ohmyzsh/ohmyzsh)
-ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
-[[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
+#ZSH=$(antidote path ohmyzsh/ohmyzsh)
+#ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/oh-my-zsh"
+#[[ -d $ZSH_CACHE_DIR ]] || mkdir -p $ZSH_CACHE_DIR
 
 # load antidote plugins
-antidote load ~/.zsh_plugins.txt
+antidote load
 
 
 setopt autocd
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-#autoload -Uz compinit && compinit
-#autoload -Uz bashcompinit && bashcompinit
 
 if [[ -f ~/.bash_aliases ]]; then
     source ~/.bash_aliases

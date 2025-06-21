@@ -1,16 +1,13 @@
-ael-code/zsh-colored-man-pages
+getantidote/use-omz
+
+# ael-code/zsh-colored-man-pages
 
 chrissicool/zsh-256color
-
-zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
 
 # Theme
 # romkatv/powerlevel10k
 
 MichaelAquilina/zsh-autoswitch-virtualenv
-
-mattmc3/zephyr path:plugins/completion
 
 #better cd
 #babarot/enhancd
@@ -23,7 +20,6 @@ ohmyzsh/ohmyzsh path:plugins/command-not-found
 ohmyzsh/ohmyzsh path:plugins/tmux
 ohmyzsh/ohmyzsh path:plugins/git-extras
 ohmyzsh/ohmyzsh path:plugins/docker
-ohmyzsh/ohmyzsh path:plugins/docker kind:fpath
 ohmyzsh/ohmyzsh path:plugins/docker-compose
 #ohmyzsh/ohmyzsh path:plugins/nvm
 ohmyzsh/ohmyzsh path:plugins/pipenv kind:fpath
@@ -36,7 +32,8 @@ DarrinTisdale/zsh-aliases-exa
 
 sunlei/zsh-ssh
 
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
 zdharma-continuum/history-search-multi-word
 zdharma-continuum/fast-syntax-highlighting
-
-mattmc3/zephyr path:plugins/completion

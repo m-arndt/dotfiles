@@ -43,6 +43,9 @@ if [[ -d ~/.zplug ]]; then
     rm -rf ~/.zplug
 fi
 
+ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
+[[ -d $ZSH_CACHE_DIR/completions ]] || mkdir -p $ZSH_CACHE_DIR/completions
+
 # install antidote if it is not installed
 if [[ ! -d ~/.antidote ]]; then
     git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote

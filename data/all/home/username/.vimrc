@@ -28,3 +28,5 @@ call plug#end()
 colorscheme codedark
 let g:airline_theme = 'codedark'
 
+set mouse=a
+

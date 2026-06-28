@@ -14,5 +14,6 @@ ln -v -b $DOTFILES_ROOT/data/all/home/username/.tmux.conf.local ~/.tmux.conf.loc
 
 (
     cd ~
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    #git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    git clone https://github.com/tmuxpack/tpack ~/.tmux/plugins/tpm
 )

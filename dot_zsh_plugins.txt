@@ -1,16 +1,13 @@
-ael-code/zsh-colored-man-pages
+getantidote/use-omz
+
+# ael-code/zsh-colored-man-pages
 
 chrissicool/zsh-256color
-
-zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
 
 # Theme
 # romkatv/powerlevel10k
 
 MichaelAquilina/zsh-autoswitch-virtualenv
-
-mattmc3/zephyr path:plugins/completion
 
 #better cd
 #babarot/enhancd
@@ -31,11 +28,13 @@ ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
 
 clavelm/yt-dlp-omz-plugin
 
-DarrinTisdale/zsh-aliases-exa
+#DarrinTisdale/zsh-aliases-exa
+z-shell/zsh-eza
 
 sunlei/zsh-ssh
 
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
 zdharma-continuum/history-search-multi-word
 zdharma-continuum/fast-syntax-highlighting
-
-mattmc3/zephyr path:plugins/completion

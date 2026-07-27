@@ -28,7 +28,8 @@ ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
 
 clavelm/yt-dlp-omz-plugin
 
-DarrinTisdale/zsh-aliases-exa
+#DarrinTisdale/zsh-aliases-exa
+z-shell/zsh-eza
 
 sunlei/zsh-ssh
 

@@ -61,12 +61,6 @@ if [ -d "$HOME/.cargo/bin" ] && [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
     export PATH="$PATH:$HOME/.cargo/bin"
 fi
 
-# install the deja binary if it is not installed (the plugin below only
-# wires up shell integration - it does not ship the daemon itself)
-if ! command -v deja &> /dev/null; then
-    curl -fsSL https://raw.githubusercontent.com/Giammarco-Ferranti/deja/main/install.sh | sh
-fi
-
 # install zinit if it is not installed
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [[ ! -d $ZINIT_HOME ]] && mkdir -p "$(dirname "$ZINIT_HOME")"

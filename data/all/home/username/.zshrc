@@ -71,11 +71,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 #zinit light chrissicool/zsh-256color
 
-zinit for \
-    configure'--with-oniguruma=builtin' \
-    make \
-  jqlang/jq
-
 # Theme
 # zinit ice depth=1
 # zinit light romkatv/powerlevel10k

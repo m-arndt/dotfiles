@@ -12,7 +12,6 @@ elif [[ ! -z $APT_GET_CMD ]]; then
     export PACKAGE_MANAGER="apt"
 else
     echo "error cannot identify package manager"
-    exit 1
 fi
 
 for item in $DOTFILES_ROOT/install/*; do

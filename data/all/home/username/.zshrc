@@ -51,7 +51,7 @@ ZSH_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh"
 [[ -d $ZSH_CACHE_DIR/completions ]] || mkdir -p $ZSH_CACHE_DIR/completions
 
 # these need to be set BEFORE the plugin declarations below - some
-# plugins/binaries (deja, eza) may live in these dirs, and other tools
+# plugins/binaries (eza) may live in these dirs, and other tools
 # may rely on them being on PATH already when their plugin loads
 if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
     export PATH="$PATH:$HOME/.local/bin"

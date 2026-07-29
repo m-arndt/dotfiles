@@ -1,0 +1,6 @@
+#!/bin/bash
+set -eufo pipefail
+
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmuxpack/tpack "$HOME/.tmux/plugins/tpm"
+fi

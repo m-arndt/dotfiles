@@ -1,0 +1,27 @@
+# ~/.local/share/chezmoi/.chezmoiexternal.toml.tmpl
+# (needs .tmpl since it uses a template function, though .toml alone is templated too)
+
+{{- $fontDir := ".local/share/fonts/nerd-fonts" -}}
+{{- if eq .chezmoi.os "darwin" -}}
+{{-   $fontDir = "Library/Fonts/nerd-fonts" -}}
+{{- end }}
+
+["{{ $fontDir }}/DejaVuSansMono"]
+    type = "archive"
+    url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "DejaVuSansMono.zip" | quote }}
+    refreshPeriod = "8760h"
+
+["{{ $fontDir }}/Hack"]
+    type = "archive"
+    url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "Hack.zip" | quote }}
+    refreshPeriod = "8760h"
+
+["{{ $fontDir }}/DroidSansMono"]
+    type = "archive"
+    url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "DroidSansMono.zip" | quote }}
+    refreshPeriod = "8760h"
+
+["{{ $fontDir }}/FiraCode"]
+    type = "archive"
+    url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "FiraCode.zip" | quote }}
+    refreshPeriod = "8760h"

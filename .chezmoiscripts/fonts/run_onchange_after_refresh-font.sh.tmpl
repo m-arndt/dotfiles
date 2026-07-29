@@ -1,0 +1,10 @@
+#!/bin/bash
+# chezmoi:onchange-source
+# DejaVuSansMono: {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "DejaVuSansMono.zip" }}
+# Hack:           {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "Hack.zip" }}
+# DroidSansMono:  {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "DroidSansMono.zip" }}
+# FiraCode:       {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "FiraCode.zip" }}
+
+{{ if eq .chezmoi.os "linux" -}}
+fc-cache -f
+{{- end }}

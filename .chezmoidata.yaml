@@ -1,0 +1,4 @@
+packages:
+  apt: [zsh, jq, fzf, tmux, vim]
+  dnf: [zsh, jq, fzf, tmux, vim, eza]
+  pacman: [zsh, jq, fzf, tmux, vim, eza]

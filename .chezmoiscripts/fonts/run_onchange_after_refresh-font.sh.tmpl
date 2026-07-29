@@ -1,4 +1,6 @@
 #!/bin/bash
+{{- $hasDE := or (eq .chezmoi.os "darwin") (gt (len (glob "/usr/share/xsessions/*.desktop")) 0) (gt (len (glob "/usr/share/wayland-sessions/*.desktop")) 0) -}}
+{{- if $hasDE }}
 # chezmoi:onchange-source
 # DejaVuSansMono: {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "DejaVuSansMono.zip" }}
 # Hack:           {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "Hack.zip" }}
@@ -7,4 +9,5 @@
 
 {{ if eq .chezmoi.os "linux" -}}
 fc-cache -f
+{{- end }}
 {{- end }}

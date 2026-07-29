@@ -1,6 +1,6 @@
-# ~/.local/share/chezmoi/.chezmoiexternal.toml.tmpl
-# (needs .tmpl since it uses a template function, though .toml alone is templated too)
+{{- $hasDE := or (eq .chezmoi.os "darwin") (gt (len (glob "/usr/share/xsessions/*.desktop")) 0) (gt (len (glob "/usr/share/wayland-sessions/*.desktop")) 0) -}}
 
+{{- if $hasDE }}
 {{- $fontDir := ".local/share/fonts/nerd-fonts" -}}
 {{- if eq .chezmoi.os "darwin" -}}
 {{-   $fontDir = "Library/Fonts/nerd-fonts" -}}
@@ -25,3 +25,4 @@
     type = "archive"
     url = {{ gitHubLatestReleaseAssetURL "ryanoasis/nerd-fonts" "FiraCode.zip" | quote }}
     refreshPeriod = "8760h"
+{{- end }}
